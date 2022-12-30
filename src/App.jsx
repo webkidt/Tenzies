@@ -10,7 +10,7 @@ function App() {
     return {
       value: Math.ceil(Math.random() * 6),
       isHeld: false,
-      id: nanoid()
+      id: nanoid(),
     }
   }
 
@@ -23,11 +23,11 @@ function App() {
   }
 
   function rollDice() {
-    setDice(d => d.map(die => {
-      return die.isHeld ?
-        die :
-        generateNewDie()
-    }))
+    setDice(d =>
+      d.map(die => {
+        return die.isHeld ? die : generateNewDie()
+      })
+    )
   }
 
   function holdDice(id) {
